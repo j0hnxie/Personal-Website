@@ -41,7 +41,7 @@ export default function Home() {
 
       <div>
         <p className="text-white">
-          My Name is John Xie
+          My Name is John Xie.
         </p>
       </div>
 
