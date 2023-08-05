@@ -18,13 +18,13 @@ export default function Header() {
         </div>
         <div className="flex flex-row space-x-8 items-center">
           <div className="flex flex-row space-x-8">
-            <Link href="/" className={pathname == "/" ? "border font-medium p-2 rounded-3xl" : "self-center"}>
+            <Link href="/" className={pathname === "/" ? "border font-medium p-2 rounded-3xl" : "self-center"}>
               Home
             </Link>
-            <Link href="/projects" className={pathname == "/projects" ? "border font-medium p-2 rounded-3xl" : "self-center"}>
+            <Link href="/projects" className={pathname.startsWith("/projects") ? "border font-medium p-2 rounded-3xl" : "self-center"}>
               Projects
             </Link>
-            <Link href="/personal" className={pathname == "/personal" ? "border font-medium p-2 rounded-3xl" : "self-center"}>
+            <Link href="/personal" className={pathname.startsWith("/personal") ? "border font-medium p-2 rounded-3xl" : "self-center"}>
               Personal
             </Link>
             <Link href="https://docs.google.com/document/d/1yDbPbo1v5p14G_wxspI6co4aPRWvx8NJ/edit" className="self-center">

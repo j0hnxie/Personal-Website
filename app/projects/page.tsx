@@ -1,44 +1,14 @@
+'use client';
+
 import Image from 'next/image'
+import Link from 'next/link'
+import { projs } from './project-list'
+import { AiFillGithub, AiOutlineLink } from 'react-icons/ai'
+import { HiOutlineNewspaper } from 'react-icons/hi'
+import { useRouter } from 'next/navigation';
 
 export default function Projects() {
-  const projs = [
-                  {
-                    'img': '/alt.png',
-                    'title': 'Personal Website',
-                    'desc': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio velit provident nobis, animi porro optio aspernatur amet temporibus non.',
-                    'tags': ['Next.JS', 'TailwindCSS', 'Typescript'],
-                  },
-                  {
-                    'img': '/alt.png',
-                    'title': 'Ultima Insights',
-                    'desc': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio velit provident nobis, animi porro optio aspernatur amet temporibus non.',
-                    'tags': ['Next.JS', 'TailwindCSS', 'Typescript', 'Javascript', 'API'],
-                  },
-                  {
-                    'img': '/alt.png',
-                    'title': 'clDice Research',
-                    'desc': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio velit provident nobis, animi porro optio aspernatur amet temporibus non.',
-                    'tags': ['Python', 'PyTorch', 'Pandas'],
-                  },
-                  {
-                    'img': '/alt.png',
-                    'title': 'Mentaro',
-                    'desc': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio velit provident nobis, animi porro optio aspernatur amet temporibus non.',
-                    'tags': ['React.JS', 'Python', 'PostgreSQL', 'Flask'],
-                  },
-                  {
-                    'img': '/alt.png',
-                    'title': 'Usability Study',
-                    'desc': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio velit provident nobis, animi porro optio aspernatur amet temporibus non.',
-                    'tags': ['UI/UX Principles', 'UI/UX Design'],
-                  },
-                  {
-                    'img': '/alt.png',
-                    'title': 'Fake News Detector Research',
-                    'desc': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque odio velit provident nobis, animi porro optio aspernatur amet temporibus non.',
-                    'tags': ['Python', 'sklearn', 'Pandas'],
-                  }
-                ]
+  const router = useRouter()
 
   return (
     <div className="flex min-h-screen w-full flex-col p-24 pt-48">
@@ -53,23 +23,41 @@ export default function Projects() {
               className="flex flex-col space-y-2 w-1/2 p-4 h-full mb-16"
               key={index}
             >
-              <Image
-                className='border-px rounded-3xl'
-                src={project['img']}
-                width={0}
-                height={0}
-                style={{ width: '100%', height: '400px' }}
-                alt="Picture of the project"
-              />
-              <div className='flex flex-row space-x-2 pt-4'>
-                {
-                  project['tags'].map((tag, index) => (
-                    <div className='border rounded-3xl p-2 text-tag' key={index}>{tag}</div>
-                  ))
-                }
-              </div>
-              <div className='text-projecttitle font-medium'>{project['title']}</div>
-              <div className='text-body'>{project['desc']}</div>
+              <Link href={"/projects/" + project['slug']} passHref={false}>
+                <Image
+                  className='border-px rounded-3xl'
+                  src={project['img']}
+                  width={0}
+                  height={0}
+                  style={{ width: '100%', height: '400px' }}
+                  alt="Picture of the project"
+                />
+                <div className='flex flex-row space-x-2 pt-4 justify-between'>
+                  <div className='flex flex-row space-x-2'>
+                    {
+                      project['tags'].map((tag, index) => (
+                        <div className='border rounded-3xl p-2 text-tag' key={index}>{tag}</div>
+                      ))
+                    }
+                  </div>
+                  <div className='flex flex-row space-x-2'>
+                    {project['github'] ? 
+                    <Link href={project['github']} rel="noopener noreferrer" target="_blank">
+                      <AiFillGithub size={30} />
+                    </Link> : <div/>}
+                    {project['link'] ? 
+                    <Link href={project['link']} rel="noopener noreferrer" target="_blank">
+                      <AiOutlineLink size={30} />
+                    </Link> : <div/>}
+                    {project['paper'] ? 
+                    <Link href={project['paper']} rel="noopener noreferrer" target="_blank">
+                      <HiOutlineNewspaper size={30} />
+                    </Link> : <div/>}
+                  </div>
+                </div>
+                <div className='text-projecttitle font-medium'>{project['title']}</div>
+                <div className='text-body'>{project['desc']}</div>
+              </Link>
             </div>
           ))
         }
