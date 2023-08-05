@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-row p-24">
+    <div className="flex min-h-screen w-full flex-row p-24">
       <div className="flex flex-col flex-1 pt-24">
         <div className="font-sans text-name font-bold">
             John Xie

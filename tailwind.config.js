@@ -19,8 +19,11 @@ module.exports = {
     },
     fontSize: {
       name: ['140px', '170px'],
+      pagetitle: ['80px', '97px'],
       title: ['32px', '38px'],
-      body: ['22px', '26px']
+      projecttitle: ['28px', '34px'],
+      body: ['22px', '26px'],
+      tag: ['13px', '16px'],
     }
   },
   plugins: [],
