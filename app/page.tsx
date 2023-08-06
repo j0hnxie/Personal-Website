@@ -13,7 +13,10 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col flex-1 pt-24">
-        <div className="font-sans text-name">
+        <div className="font-sans text-pagetitle">
+            Timeline Under Construction
+        </div>
+        {/* <div className="font-sans text-name">
             Timeline
         </div>
         <div className="font-sans text-name">
@@ -33,10 +36,7 @@ export default function Home() {
         </div>
         <div className="font-sans text-name">
             Timeline
-        </div>
-        <div className="font-sans text-name">
-            Timeline
-        </div>
+        </div> */}
       </div>
     </div>
   )

@@ -23,15 +23,26 @@ export default function Personal() {
   // }, [])
 
   return (
-    <div className="flex min-h-screen w-full flex-row p-24">
-      <div className="flex flex-col flex-1 pt-24">
-        <div className="text-title font-bold">
-          My Top Songs: 
+    <div className="flex min-h-screen w-full flex-row p-24 pt-48">
+      <div className='flex flex-col w-full'>
+        <div className='text-pagetitle font-bold mb-8'>
+          Personal
         </div>
-      </div>
-      <div className="flex flex-col flex-1 pt-24">
-        <div className="text-title font-bold">
-          My Top Artists: 
+        <hr/>
+        <div className='flex mt-8'>
+          {/* <div className="flex flex-col flex-1">
+            <div className="text-title font-bold">
+              My Top Songs: 
+            </div>
+          </div>
+          <div className="flex flex-col flex-1">
+            <div className="text-title font-bold">
+              My Top Artists: 
+            </div>
+          </div> */}
+          <div className='text-pagetitle text-bold'>
+            Under Construction
+          </div>
         </div>
       </div>
     </div>

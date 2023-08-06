@@ -23,7 +23,10 @@ export default function Projects() {
               className="flex flex-col space-y-2 w-1/2 p-4 h-full mb-16"
               key={index}
             >
-              <Link href={"/projects/" + project['slug']} passHref={false}>
+              <div onClick={() => {
+                router.push("/projects/" + project['slug'])
+              }}>
+              {/* <Link href={"/projects/" + project['slug']}> */}
                 <Image
                   className='border-px rounded-3xl'
                   src={project['img']}
@@ -57,7 +60,8 @@ export default function Projects() {
                 </div>
                 <div className='text-projecttitle font-medium'>{project['title']}</div>
                 <div className='text-body'>{project['desc']}</div>
-              </Link>
+              </div>
+              {/* </Link> */}
             </div>
           ))
         }

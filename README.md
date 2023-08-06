@@ -1,10 +1,10 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-## TO DO LIST:
-* Fix bug where you click on GitHub, Link, Paper icon on Projects page it goes to Specific Projects Page
-* Add Spotify Top 10 Artists and Songs
-* Write descriptions for projects
-* Add timeline to homepage
 
+## TO DO LIST:
+
+- Add Spotify Top 10 Artists and Songs
+- Write descriptions for projects
+- Add timeline to homepage
 
 ## Getting Started
 
