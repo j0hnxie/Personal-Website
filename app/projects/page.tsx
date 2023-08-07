@@ -20,7 +20,7 @@ export default function Projects() {
         {
           projs.map((project, index) => (
             <div
-              className="flex flex-col space-y-2 w-1/2 p-4 h-full mb-16"
+              className="flex flex-col space-y-2 w-1/2 p-4 h-full mb-16 cursor-pointer" 
               key={index}
             >
               <div onClick={() => {
