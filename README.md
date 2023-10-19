@@ -3,7 +3,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## TO DO LIST:
 
 - Add Spotify Top 10 Artists and Songs
-- Write descriptions for projects
 - Add timeline to homepage
 - Remove under construction
 

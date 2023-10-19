@@ -23,9 +23,9 @@ export default function Personal() {
   // }, [])
 
   return (
-    <div className="flex min-h-screen w-full flex-row p-24 pt-48">
+    <div className="flex min-h-screen w-full flex-row p-10 sm:p-24 pt-48">
       <div className='flex flex-col w-full'>
-        <div className='text-pagetitle font-bold mb-8'>
+        <div className='text-mobilePagetitle sm:text-pagetitle font-bold mb-8'>
           Personal
         </div>
         <hr/>
@@ -40,7 +40,7 @@ export default function Personal() {
               My Top Artists: 
             </div>
           </div> */}
-          <div className='text-pagetitle text-bold'>
+          <div className='text-mobileConstruction sm:text-pagetitle text-bold'>
             Under Construction
           </div>
         </div>
