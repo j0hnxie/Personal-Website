@@ -11,7 +11,7 @@ export default function Projects() {
   const router = useRouter()
 
   return (
-    <div className="flex min-h-screen w-full flex-col p-24 pt-48">
+    <div className="flex min-h-screen w-full flex-col p-10 sm:p-24 pt-48">
       <div className="text-pagetitle font-bold mb-8">
         Projects
       </div>
@@ -20,26 +20,27 @@ export default function Projects() {
         {
           projs.map((project, index) => (
             <div
-              className="flex flex-col space-y-2 w-1/2 p-4 h-full mb-16 cursor-pointer" 
+              className="flex flex-col space-y-2 w-full sm:w-1/2 p-4 h-full mb-16 cursor-pointer" 
               key={index}
             >
               <div onClick={() => {
                 router.push("/projects/" + project['slug'])
               }}>
-              {/* <Link href={"/projects/" + project['slug']}> */}
                 <Image
-                  className='border-px rounded-3xl'
+                  className='border-px rounded-3xl object-cover sm:h-48 xl:h-96'
                   src={project['img']}
                   width={0}
                   height={0}
-                  style={{ width: '100%', height: '400px' }}
+                  sizes='100vw'
+                  style={{ width: '100%' }}
+                  // fill={true}
                   alt="Picture of the project"
                 />
                 <div className='flex flex-row space-x-2 pt-4 justify-between'>
-                  <div className='flex flex-row space-x-2'>
+                  <div className='flex flex-row flex-wrap'>
                     {
                       project['tags'].map((tag, index) => (
-                        <div className='border rounded-3xl p-2 text-tag' key={index}>{tag}</div>
+                        <div className='border rounded-3xl p-2 text-tag mb-2 mr-2' key={index}>{tag}</div>
                       ))
                     }
                   </div>
@@ -59,7 +60,7 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className='text-projecttitle font-medium'>{project['title']}</div>
-                <div className='text-body'>{project['desc']}</div>
+                <div className='text-mobileBody sm:text-body'>{project['desc']}</div>
               </div>
               {/* </Link> */}
             </div>
