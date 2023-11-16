@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 import Header from './header'
 
 const inter = Inter({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
             }}
           >
             {children}
+            <Analytics />
           </main>
         </div>
       </body>
