@@ -25,7 +25,7 @@ export default function Personal() {
   return (
     <div className="flex min-h-screen w-full flex-row p-10 sm:p-24 pt-48">
       <div className='flex flex-col w-full'>
-        <div className='text-mobilePagetitle sm:text-pagetitle font-bold mb-8'>
+        <div className='text-mobilePagetitle sm:text-pagetitle font-bold mt-8 mb-8'>
           Personal
         </div>
         <hr/>

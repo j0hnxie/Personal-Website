@@ -64,7 +64,7 @@ export default function Header() {
               <Link href="/personal" className={pathname.startsWith("/personal") ? "border font-medium p-2 rounded-3xl" : "self-center hover:text-hover-blue"}>
                 Personal
               </Link>
-              <Link href="https://drive.google.com/file/d/1RKvlneYQovST8dcRp9Zm4BEDYgol_DPM/view?usp=sharing" className="self-center hover:text-hover-blue">
+              <Link href="https://drive.google.com/file/d/16EdD8f9sqRxFmxeDiaim3OO4okiy2b0Q/view?usp=sharing" className="self-center hover:text-hover-blue">
                 Resume
               </Link>
             </div>

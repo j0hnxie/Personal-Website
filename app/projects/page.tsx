@@ -12,7 +12,7 @@ export default function Projects() {
 
   return (
     <div className="flex min-h-screen w-full flex-col p-10 sm:p-24 pt-48">
-      <div className="text-pagetitle font-bold mb-8">
+      <div className="text-pagetitle font-bold mb-8 mt-8">
         Projects
       </div>
       <hr/>
