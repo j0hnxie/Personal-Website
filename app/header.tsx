@@ -87,7 +87,7 @@ export default function Header() {
                 Personal
               </Link>
               <Link
-                href="https://drive.google.com/file/d/1SCUOV91QxZZTDifCg1HBjqQjDDsc2WVH/view?usp=sharing"
+                href="https://drive.google.com/file/d/1bM_VWGBnAIxE9wr4npxcRoRwzRgDaYJJ/view?usp=sharing"
                 className="self-center hover:text-hover-blue"
               >
                 Resume
