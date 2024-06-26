@@ -2,6 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TO DO LIST:
 
+- Add ShapeLog, Internal Portal, Atlas Website, Insta485, MapReduce, SearchEngine
 - Add Spotify Top 10 Artists and Songs
 - Add timeline to homepage
 - Remove under construction
